@@ -6,14 +6,14 @@
 
 * java中==和equals和hashCode的区别
 
-    ==对于引用对象来说判断是不是同一个对象，即判断是否是指向同一个对象。对于基本类型是判断值相等
+    ==对于引用对象来说判断是不是同一个对象，即判断是否是指向堆中同一个对象。对于基本类型是判断值相等
 
     equals和hashCode是Object中的方法。equals用来判断两个对象是否相等(一般子类会复写该方法)，hashCode产生哈希码。
 
     java要求重写equals必须复写hashCode方法(HashSet等集合需要)，两个对象相等，hashCode必定相等，hashCode不等的对象，肯定不相等
 
 * int、char、long各占多少字节数
-* int与integer的区别
+* int与integer的区别 
 * 探探对java多态的理解
 * String、StringBuffer、StringBuilder区别
 * 什么是内部类？内部类的作用
