@@ -56,7 +56,7 @@
     
 * 泛型中extends和super的区别
 
-    extennds指定
+    extends指定 方向的上边界，super指定泛型的下边界
 
 * 父类的静态方法能否被子类重写
     
