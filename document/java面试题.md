@@ -119,6 +119,13 @@
 * 说一下泛型原理，并举例说明
 * Java中String的了解
 * String为什么要设计成不可变的？
+
+    1 String类本质上是char[]数组，并且也声明成了final，String声明成final可以防止被继承修改char[]数组的引用
+    
+    2 String类在java中用的很平凡，jdk设计者更希望String 在函数的传递中更像基本类型
+    
+    3 有人说声明成final ，JVM才不用对相关方法在虚函数表中查询，而直接定位到string类的相关方法上，提高了执行效率
+
 * Object类的equal和hashCode方法重写，为什么？
 
 
