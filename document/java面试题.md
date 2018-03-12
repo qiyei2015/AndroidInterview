@@ -228,11 +228,17 @@
 
 * ArrayMap和HashMap的对比
 
-    ArrayMap是Android中提供的一个
+    ArrayMap是Android中提供的一个类，java中并没有。
+    
+    ArrayMap用两个数组来存储hash和key value(k-v存一个)，hashmap是链表数据来存储hash 和k-v
+    
+    ArrayMap的扩容是System.arrayCopy,HashMap是new,效率稍微差一点
+    
+    ArrayMap里面是正序排列的,因此查找是二分查找，在插入性能上比HashMap稍微高一点，查询性能上比不上HashMap
 
 * HashTable实现原理
 
-
+    在HashMap上加了同步锁
 
 * TreeMap具体实现
 
@@ -244,13 +250,26 @@
 
 * HashMap与HashSet的区别
 
+    HashSet底层也是基于HashMap的
+
 * HashSet与HashMap怎么判断集合元素重复？
+
+    hashcode 还有equals：先判断K的hash值，然后判断key 时候相等，或者key equals 相等
+
 
 * 集合Set实现Hash怎么防止碰撞
 
+    判断两个key:如上
+
 * ArrayList和LinkedList的区别，以及应用场景
 
+    ArrayList是基于数组的(默认大小是10)，LinkList是基于链表的
+    
+    在插入，删除等上就是数组与链表的区别
+  
 * 数组和链表的区别
+
+    略
 
 * 二叉树的深度优先遍历和广度优先遍历的具体实现
 
