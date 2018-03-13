@@ -224,6 +224,7 @@
 
 * ConcurrentHashMap的实现原理
 
+    1 采用锁分段的技术
     
 
 * ArrayMap和HashMap的对比
@@ -239,6 +240,8 @@
 * HashTable实现原理
 
     在HashMap上加了同步锁
+    
+    HashTable不允许key和value为null
 
 * TreeMap具体实现
 
