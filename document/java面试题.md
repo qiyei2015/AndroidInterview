@@ -326,8 +326,10 @@
     wait会释放锁，sleep不会释放锁
 
 * 谈谈wait/notify关键字的理解
-
-
+    
+    wait:释放锁，导致当前的线程等待，直到其他线程调用此对象的notify( ) 方法或 notifyAll( ) 方法
+    
+    notify:唤醒在此对象监视器上等待的单个线程
 
 * 什么导致线程阻塞？
 
@@ -352,29 +354,40 @@
 
 * 如何实现线程同步？
 
-    lue
+    略
 
 * 两个进程同时要求写或者读，能不能实现？如何防止进程的同步？
 
-
+    不能，用MappedByteBuffer或者socket实现同步，也可以借助操作系统的一些进程间通信方式来同步，例如共享内存，信号，管道等
 
 * 线程间操作List
 
-
+    略
 
 * Java中对象的生命周期
 
-
+    
 
 * Synchronized用法
 
+    略
+
 * synchronize的原理
+
+    加锁
 
 * 谈谈对Synchronized关键字，类锁，方法锁，重入锁的理解
 
-* static synchronized 方法的多线程访问和作用
+    见下面
 
+* static synchronized 方法的多线程访问和作用
+        
+    锁的是类对象    
+    
 * 同一个类里面两个synchronized方法，两个线程同时访问的问题
+
+   具体例子具体分析
+
 
 * volatile的原理
 
@@ -394,13 +407,19 @@
     
 * synchronized 和volatile 关键字的区别
 
+    略
+
 * synchronized与Lock的区别
+
+    略
 
 * ReentrantLock 、synchronized和volatile比较
 
 * ReentrantLock的内部实现
 
 * lock原理
+
+
 
 * 死锁的四个必要条件？
 
@@ -425,7 +444,6 @@
 * 多线程断点续传原理
 
 * 断点续传的实现
-
 
 
 ----
