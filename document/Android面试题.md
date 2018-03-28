@@ -103,6 +103,7 @@ Android面试题除了Android基础之外，更多的问的是一些源码级别
 * 为什么不能在子线程更新UI？
 * ANR产生的原因是什么？
 * ANR定位和修正
+  StrictMode BlockCanary
 * oom是什么？
 * 什么情况导致oom？
 * 有什么解决方法可以避免OOM？
