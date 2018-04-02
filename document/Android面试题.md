@@ -5,33 +5,129 @@ Android面试题除了Android基础之外，更多的问的是一些源码级别
 ### 一、Android基础知识点
 
 * 四大组件是什么
+
+ Activity Service BroadcastReceiver ContentProvider
+
 * 四大组件的生命周期和简单用法
+
+activity:onCreate onStart onResume onPause onStop onDestory
+
+service: onCreate onStartCommand onDestory   [onCreate] onBind onUnbind [onDestory]
+
+receiver:onReceive
+
+contentProvider: onCreate
+
 * Activity之间的通信方式
+
+    intent
+
 * Activity各种情况下的生命周期
+
+    略
+
 * 横竖屏切换的时候，Activity 各种情况下的生命周期
+
+    onCreate onStart onResume onPause onStop onDestory
+
 * Activity与Fragment之间生命周期比较
+
+    Activity:onCreate onStart onResume onPause onStop onDestory
+
+    Fragment:onAttach() onCreate onCreateView onStart onResume onPause onStop onDestoryView onDestory
+
 * Activity上有Dialog的时候按Home键时的生命周期
+
+
+
 * 两个Activity 之间跳转时必然会执行的是哪几个方法？
+
+   一般 onPause onStop  --> onStart onResume
+
 * 前台切换到后台，然后再回到前台，Activity生命周期回调方法。弹出Dialog，生命值周期回调方法。
+
+    前台到后台：onPause onStop
+
+    后台到前台：onStart onResume
+
+    弹出Dialog: onPause
+
+
 * Activity的四种启动模式对比
+
+    standard:标准启动模式 栈类实例
+
+    singleTop:栈顶单例
+
+    singleTask:栈内单例
+
+    singleInstance:单独一个栈
+
+
 * Activity状态保存于恢复
+
+    保存：onSaveInstanceState
+
+    恢复：onCreate中的Bundle参数
+
 * fragment各种情况下的生命周期
+
+    Fragment:onAttach() onCreate onCreateView onStart onResume onPause onStop onDestoryView onDestory
+
 * Fragment状态保存startActivityForResult是哪个类的方法，在什么情况下使用？
+
+    context,在启动的Activity需要返回时调用
+
 * 如何实现Fragment的滑动？
+
+    ViewPager
+
 * fragment之间传递数据的方式？
+
+    构造时：setArguments Bundle
+
+
 * Activity 怎么和Service 绑定？
+
+    bindService
+
+
 * 怎么在Activity 中启动自己对应的Service？
+
+    bindService?
+
 * service和activity怎么进行数据交互？
+
+    startService:intent
+
 * Service的开启方式
+
+    startService:
+
+    BindService:
+
 * 请描述一下Service 的生命周期
+
+    service: onCreate onStartCommand onDestory   [onCreate] onBind onUnbind [onDestory]
+
 * 谈谈你对ContentProvider的理解
+
+    数据提供者，一般结合数据库使用
+
 * 说说ContentProvider、ContentResolver、ContentObserver 之间的关系
+
 * 请描述一下广播BroadcastReceiver的理解
+
 * 广播的分类
+
 * 广播使用的方式和场景
+
 * 在manifest 和代码中如何注册和使用BroadcastReceiver?
+
 * 本地广播和全局广播有什么差别？
+
 * BroadcastReceiver，LocalBroadcastReceiver 区别
+
 * AlertDialog,popupWindow,Activity区别
 * Application 和 Activity 的 Context 对象的区别
 * Android属性动画特性
