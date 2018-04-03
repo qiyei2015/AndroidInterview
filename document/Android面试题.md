@@ -12,7 +12,7 @@ Android面试题除了Android基础之外，更多的问的是一些源码级别
 
 activity:onCreate onStart onResume onPause onStop onDestory
 
-service: onCreate onStartCommand onDestory   [onCreate] onBind onUnbind [onDestory]
+service: start:onCreate onStartCommand onDestory    bind:[onCreate] onBind onUnbind [onDestory]
 
 receiver:onReceive
 
@@ -38,11 +38,15 @@ contentProvider: onCreate
 
 * Activity上有Dialog的时候按Home键时的生命周期
 
-
+    普通dialog: onPause onStop
+    ActivityDialog: 弹出对话框时已经调用onPause 后面直接调用 onStop
 
 * 两个Activity 之间跳转时必然会执行的是哪几个方法？
 
-   一般 onPause onStop  --> onStart onResume
+   一般 onPause onStop  --> [onCreate] onStart onResume
+
+    特殊情况：onPause --> onStart onResume
+
 
 * 前台切换到后台，然后再回到前台，Activity生命周期回调方法。弹出Dialog，生命值周期回调方法。
 
@@ -50,7 +54,7 @@ contentProvider: onCreate
 
     后台到前台：onStart onResume
 
-    弹出Dialog: onPause
+    弹出Activity Dialog: onPause 结束dialog onResume
 
 
 * Activity的四种启动模式对比
