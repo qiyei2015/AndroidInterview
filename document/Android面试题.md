@@ -120,37 +120,107 @@ contentProvider: onCreate
 
 * 说说ContentProvider、ContentResolver、ContentObserver 之间的关系
 
+    ContentProvider是内容提供者，主要用于实现数据访问的接口
+
+    ContentResolver是内容解析者，用于对ContentProvider的访问
+
+    ContentObserver是内容观察者，用于观察uri数据的变化
+
 * 请描述一下广播BroadcastReceiver的理解
+
+    android提供的一种通讯方式
 
 * 广播的分类
 
+    静态广播，动态广播
+
+    全局广播，本地广播
+
 * 广播使用的方式和场景
+
+    略
 
 * 在manifest 和代码中如何注册和使用BroadcastReceiver?
 
+    静态注册，动态注册
+
 * 本地广播和全局广播有什么差别？
+
+    作用域范围不同，全局广播是整个系统，本地广播只有本进程内有效
 
 * BroadcastReceiver，LocalBroadcastReceiver 区别
 
+    略，没有LocalBroadcastReceiver这个类吧？
+
 * AlertDialog,popupWindow,Activity区别
+
+    对话框 弹窗
+
+    这几种窗口的窗口类型和主序不同，都受WMS管理
+
 * Application 和 Activity 的 Context 对象的区别
+
+    两种不同的context,生命周期不同
+
 * Android属性动画特性
+
+    能对View的属性做动画，保留了View这些监听之类的属性
+
+
 * 如何导入外部数据库?
+
+    不太明白啥意思？
+
 * LinearLayout、RelativeLayout、FrameLayout的特性及对比，并介绍使用场景。
+
+    略
+
 * 谈谈对接口与回调的理解
+
+    略
+
 * 回调的原理
+
+    略
+
 * 写一个回调demo
+
+    略
+
 * 介绍下SurfView
+
+    一个View控件 生命周期分别为surfaceCreated（创建）   surfaceChanged（改变）   surfaceDestroyed（销毁）
+    绘图是由SurfaceHolder来完成的，不受必须在主线程更新UI的限制，常用作复杂界面，例如游戏，相机等界面图像的绘制
+
 * RecycleView的使用
+
+    略
+
 * 序列化的作用，以及Android两种序列化的区别
+
+    略
+
 * 差值器
+
+
+
 * 估值器
+
+
 * Android中数据存储方式
+
+    略
 
 ### 二、Android源码相关分析
 
 * Android动画框架实现原理
+
+    属性动画主要是调用setXxx改变属性
+
 * Android各个版本API的区别
+
+    略
+
 * Requestlayout，onlayout，onDraw，DrawChild区别与联系
 * invalidate和postInvalidate的区别及使用
 * Activity-Window-View三者的差别
