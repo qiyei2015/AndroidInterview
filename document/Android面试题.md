@@ -222,10 +222,26 @@ contentProvider: onCreate
     略
 
 * Requestlayout，onlayout，onDraw，DrawChild区别与联系
+
+    请求布局，布局回调，draw回调 绘制child
+
 * invalidate和postInvalidate的区别及使用
+
+    invalidate:UI线程使用，使整个UI重绘
+    postInvalidate：非UI线程使用
+
 * Activity-Window-View三者的差别
+
+    window包含activity,activity包含View
+
 * 谈谈对Volley的理解
+
+
 * 如何优化自定义View
+
+    onDraw中不要有耗时的操作
+
+
 * 低版本SDK如何实现高版本api？
 * 描述一次网络请求的流程
 * HttpUrlConnection 和 okhttp关系
