@@ -236,35 +236,95 @@ contentProvider: onCreate
 
 * 谈谈对Volley的理解
 
+    后面再讲
 
 * 如何优化自定义View
 
     onDraw中不要有耗时的操作
 
-
 * 低版本SDK如何实现高版本api？
+
+    1 support 包中去找相应的api替代
+
+    2 @TargeApi()解决编译错误，使用版本判断
+
 * 描述一次网络请求的流程
+
+    发起请求 tcp握手 写入流 获取response tcp连接关闭
+
 * HttpUrlConnection 和 okhttp关系
+
+ HttpUrlConnection 是java的网络连接的api okhttp是一个高效的网络库
+
 * Bitmap对象的理解
+
+    位图，利用每一个字节来表示像素
+
 * looper架构
+
+    MessageQueue Handler Message Looper ThreadLocal
+
 * ActivityThread，AMS，WMS的工作原理
+
+    后续会重点讲
+
 * 自定义View如何考虑机型适配
+
+    不明白问题想问的，要匹配什么？布局不要写死，view大小不要写死
+
 * 自定义View的事件
+
+    View事件分发流程？
+
 * AstncTask+HttpClient 与 AsyncHttpClient有什么区别？
+
+
 * LaunchMode应用场景
+
+    启动模式，参考四种启动模式
+
 * AsyncTask 如何使用?
+
+
+
 * SpareArray原理
+
+
+
 * 请介绍下ContentProvider 是如何实现数据共享的？
+
+
+
 * AndroidService与Activity之间通信的几种方式
+
+
 * IntentService原理及作用是什么？
+
+
 * 说说Activity、Intent、Service 是什么关系
+
+
 * ApplicationContext和ActivityContext的区别
+
+
 * SP是进程同步的吗?有什么方法做到同步？
+
+
 * 谈谈多线程在Android中的使用
+
+
 * 进程和 Application 的生命周期
+
+
 * 封装View的时候怎么知道view的大小
+
+
 * RecycleView原理
+
+
 * AndroidManifest的作用与理解
+
+    资源清单文件，打包，和安装的时候都会用到
 
 ### 三、常见的一些原理性问题
 
