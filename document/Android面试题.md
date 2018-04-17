@@ -285,42 +285,51 @@ contentProvider: onCreate
 
 * AsyncTask 如何使用?
 
-
+    略
 
 * SpareArray原理
 
-
+    参考java
 
 * 请介绍下ContentProvider 是如何实现数据共享的？
 
-
+    待定
 
 * AndroidService与Activity之间通信的几种方式
 
+    bindservice intent 广播
 
 * IntentService原理及作用是什么？
 
+    thread service
 
 * 说说Activity、Intent、Service 是什么关系
 
+    略
 
 * ApplicationContext和ActivityContext的区别
 
+    略
 
 * SP是进程同步的吗?有什么方法做到同步？
 
+    不是，低版本支持多进程读写。MODE_MULTI_PROCESS 使用ContentProvider来替代和同步
 
 * 谈谈多线程在Android中的使用
 
+    略
 
 * 进程和 Application 的生命周期
 
+    略
 
 * 封装View的时候怎么知道view的大小
 
+    不太理解题目，怎么获取View的大小？handle post ViewTree监听
 
 * RecycleView原理
 
+    略
 
 * AndroidManifest的作用与理解
 
@@ -329,50 +338,169 @@ contentProvider: onCreate
 ### 三、常见的一些原理性问题
 
 * Handler机制和底层实现
+
+    略
+
 * Handler、Thread和HandlerThread的差别
+
+    略
+
 * handler发消息给子线程，looper怎么启动？
+
+    略
+
 * 关于Handler，在任何地方new Handler 都是什么线程下?
+
+    要看Looper
+
 * ThreadLocal原理，实现及如何保证Local属性？
+
+    jvm
+
 * 请解释下在单线程模型中Message、Handler、Message Queue、Looper之间的关系
+
+    略
+
 * 请描述一下View事件传递分发机制
+
+    略
+
 * Touch事件传递流程
+
+    略
+
 * 事件分发中的onTouch 和onTouchEvent 有什么区别，又该如何使用？
+
+    略
+
 * View和ViewGroup分别有哪些事件分发相关的回调方法
+
+    略
+
 * View刷新机制
+
+    requestLayout invalite()
+
 * View绘制流程
+
+    略
+
 * 自定义控件原理
+
+    略
+
 * 自定义View如何提供获取View属性的接口？
+
+    略
+
 * Android代码中实现WAP方式联网
 * AsyncTask机制
+
+    略
+
 * AsyncTask原理及不足
+
+    略
+
 * 如何取消AsyncTask？
+
+    略
+
 * 为什么不能在子线程更新UI？
+
+    ViewRootImpl View不是线程安全的
+
 * ANR产生的原因是什么？
+
+    三种
+
 * ANR定位和修正
 
   StrictMode BlockCanary
   
 * oom是什么？
+
+    略
+
 * 什么情况导致oom？
+
+    略
+
 * 有什么解决方法可以避免OOM？
+
+    略
+
 * Oom 是否可以try catch？为什么？
+
+    应该可以，需要试验一下。https://www.jianshu.com/p/e574f0ffdb42
+
 * 内存泄漏是什么？
+
+    略
+
 * 什么情况导致内存泄漏？
+
+    略
+
 * 如何防止线程的内存泄漏？
+
+    略
+
 * 内存泄露场的解决方法
+
+    略
+
 * 内存泄漏和内存溢出区别？
+
+    略
+
 * LruCache默认缓存大小
+
+    默认0，构造方法就需要指定大小
+
 * ContentProvider的权限管理(解答：读写分离，权限控制-精确到表级，URL控制)
+
+    不懂
+
 * 如何通过广播拦截和abort一条短信？
+
+    不懂
+
 * 广播是否可以请求网络？
+
+    不行，广播中不能有耗时的操作
+
 * 广播引起anr的时间限制是多少？
+
+    15秒
+
 * 计算一个view的嵌套层级
+
+    略
+
 * Activity栈
+
+    略
+
 * Android线程有没有上限？
+
+    有 ，Linux句柄数
+
 * 线程池有没有上限？
+
+    有
+
 * ListView重用的是什么？
+
+    View
+
 * Android为什么引入Parcelable？
+
+    更搞笑
+
 * 有没有尝试简化Parcelable的使用？
+
+    略
 
 ### 四、开发中常见的一些问题
 
